@@ -11,10 +11,11 @@
         <img src="/images/cruciaLogo.png" class="logoPag" alt="">
     </div>
     <div class="container">
-        <div class="box box-1" style="--img: url(/images/pionera.jpg);" data-text="PIONERA"></div>
+        <div class="box box-1" style="--img: url(/images/drilor.jpg);" data-text="DRILOR" ></div>
         <div class="box box-2" style="--img: url(/images/gringa.jpg);" data-text="GRINGA" ></div>
-        <div class="box box-3" style="--img: url(/images/plantor.jpg);" data-text="PLANTOR" ></div>
-        <div class="box box-4" style="--img: url(/images/drilor.jpg);" data-text="DRILOR" ></div>
+        <div class="box box-3" style="--img: url(/images/pionera.jpg);" data-text="PIONERA"></div>
+        <div class="box box-4" style="--img: url(/images/plantor.jpg);" data-text="PLANTOR" ></div>
+        
     </div>
 
     <script>
@@ -22,9 +23,11 @@
 
         boxes.forEach(box => {
             box.addEventListener("click", () => {
-            // Obtén el valor de data-text para determinar la URL
+  
             const dataText = box.getAttribute("data-text");
-            window.location.href = `${dataText.toLowerCase()}1.html`;
+            const machineName = dataText.toLowerCase();
+            window.location.href = `/${machineName}/html/metros.html`;
+
             });
         });
     </script>

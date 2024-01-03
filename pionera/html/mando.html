@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/pionera/css/mando.css">
+
+</head>
+<body>
+    <div class="header">
+        <img src="/images/cruciaLogo.png" class="logoPag" alt="">
+        <img src="/images/arrow.png" class="arrow" alt="">
+    </div>
+    <div class="container">
+        <div class="box box-1" style="--img: url(/images/pionera.jpg);" data-text="MANDO MECANICO"></div>
+        <div class="box box-2" style="--img: url(/images/pionera.jpg);" data-text="MANDO HIDRAULICO" ></div>
+       
+    </div>
+
+
+
+<script>
+    const boxes = document.querySelectorAll(".box");
+
+    boxes.forEach(box => {
+        box.addEventListener("click", () => {
+        const dataText = box.getAttribute("data-text");
+        if(dataText == "MANDO MECANICO"){
+            window.location.href = `pionera2.html`;
+        }else{
+            window.location.href = `pionera1.html`; 
+        }
+        
+        });
+    });
+
+    const arrow = document.querySelector(".arrow")
+
+    arrow.addEventListener("click",()=>{
+        window.location.href = "/pionera/html/metros.html"
+    })
+
+    const logo = document.querySelector(".logoPag")
+
+    logo.addEventListener("click", ()=>{
+        window.location.href = "/inicio/index.html"
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/pionera/css/pionera1.css">
+</head>
+<body>
+    <div class="header">
+        <img src="/images/cruciaLogo.png" class="logoPag" alt="">
+        <img src="/images/arrow.png" class="arrow" alt="">
+    </div>
+    <div class="container">
+        <div class="box box-1" style="--img: url(/images/pionera.jpg);" data-text="CHORRILLO"></div>
+        <div class="box box-2" style="--img: url(/images/pionera.jpg);" data-text="LEAF" ></div>
+        <div class="box box-3" style="--img: url(/images/pionera.jpg);" data-text="PRECISION PLANTING" ></div>
+    </div>
+
+
+
+<script>
+    const boxes = document.querySelectorAll(".box");
+
+    boxes.forEach(box => {
+        box.addEventListener("click", () => {
+        const dataText = box.getAttribute("data-text");
+        if(dataText !== "LEAF" && dataText !== "PRECISION PLANTING"){
+            window.location.href = `piezas2.html`;
+        }else{
+            window.location.href = "piezas1.html"
+        }
+        
+        });
+    });
+
+    const arrow = document.querySelector(".arrow")
+
+    arrow.addEventListener("click",()=>{
+        window.location.href = "/pionera/html/mando.html"
+    })
+
+    const logo = document.querySelector(".logoPag")
+
+    logo.addEventListener("click", ()=>{
+        window.location.href = "/inicio/index.html"
+    })
+</script>
+</body>
+</html>
