@@ -80,25 +80,10 @@ body, html {
     filter: grayscale(0%) opacity(100%);
 }
 
-/* .container:has(.box-1:hover){
-    grid-template-columns: 20fr ;
-}
-
-.container:has(.box-2:hover){
-    grid-template-columns:20fr;
-}
-
-.container:has(.box-3:hover){
-    grid-template-columns:20fr;
-}
-
-.container:has(.box-4:hover){
-    grid-template-columns:20fr;
-}
- */
 .arrow{
     position: absolute;
     height: 50px;
-    top: 10px;
+    top: 30px;
     left: 10px;
 }
+
